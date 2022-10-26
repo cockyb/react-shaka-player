@@ -1,12 +1,15 @@
 {
-  "name": "react-shaka-player",
+  "name": "react-shaka-plyr",
   "version": "0.1.0",
   "description": "shaka player wrapped react component",
-  "main": "index.js",
+  "main": "./dist/bundle.js",
   "author": "cockyb",
   "license": "MIT",
   "scripts": {
-    "build": "npx rollup -c"
+    "build": "npx rollup -c",
+    "watch": "rollup -cw",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@rollup/plugin-babel": "^5.3.1",
@@ -16,6 +19,15 @@
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
     "@babel/preset-react": "^7.18.6",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.79.1"
