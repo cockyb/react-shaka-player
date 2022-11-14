@@ -1,9 +1,8 @@
 import React from "react";
-import { useRef } from "react";
-import { ShakaPlayer } from "../index";
+import { ShakaPlayer } from "../../dist/bundle";
 
 export const Player = () => {
-  const ref = useRef(null);
-
-  return <ShakaPlayer src="" ref={ref} />;
+  return (
+    <ShakaPlayer src="http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8" />
+  );
 };
