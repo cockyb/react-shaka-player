@@ -1,6 +1,6 @@
 {
   "name": "react-shaka-plyr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "shaka player wrapped react component",
   "main": "./dist/bundle.js",
   "author": "cockyb",
