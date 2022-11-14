@@ -1,5 +1,5 @@
 import React from "react";
-import { ShakaPlayer } from "../../dist/bundle";
+import ShakaPlayer from "../ShakaPlayer";
 
 export const Player = () => {
   return (
