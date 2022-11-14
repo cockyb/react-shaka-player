@@ -12,6 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "mux.js": "^6.2.0",
     "shaka-player": "^4.2.1"
   },
   "devDependencies": {
