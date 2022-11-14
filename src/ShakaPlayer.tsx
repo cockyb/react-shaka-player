@@ -4,7 +4,7 @@ import "shaka-player/dist/controls.css";
 const muxjs = require("mux.js");
 
 shaka.polyfill.installAll();
-interface IShakaPlayer
+export interface IShakaPlayer
   extends React.DetailedHTMLProps<
     React.VideoHTMLAttributes<HTMLVideoElement>,
     HTMLVideoElement

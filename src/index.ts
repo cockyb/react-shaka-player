@@ -1,3 +1,1 @@
-import ShakaPlayer from "./ShakaPlayer";
-
-export { ShakaPlayer };
+export { default as ShakaPlayer } from "./ShakaPlayer";

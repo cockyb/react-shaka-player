@@ -1,8 +1,13 @@
 {
   "name": "react-shaka-plyr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "shaka player wrapped react component",
-  "main": "./dist/bundle.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "author": "cockyb",
   "license": "MIT",
   "scripts": {
@@ -13,6 +18,7 @@
   },
   "dependencies": {
     "mux.js": "^6.2.0",
+    "rollup-plugin-dts": "^5.0.0",
     "shaka-player": "^4.2.1"
   },
   "devDependencies": {
