@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 
 export interface VideoState {
+  time: number;
+  duration: number;
   paused: boolean;
   muted: boolean;
   volume: number;
@@ -10,10 +12,6 @@ export interface VideoState {
 interface ShakaPlayerContextProps {
   state: VideoState;
   setState: React.Dispatch<React.SetStateAction<VideoState>>;
-  time: number;
-  setTime: React.Dispatch<React.SetStateAction<number>>;
-  duration: number;
-  setDuration: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export const ShakaPlayerContext =

@@ -54,7 +54,7 @@ export const ShakaPlayer = forwardRef((props: IShakaPlayer, ref) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const uiContainerRef = useRef<HTMLDivElement>(null);
 
-  const { setState, setTime, setDuration } = useShakaPlayerContext();
+  const { setState } = useShakaPlayerContext();
 
   useEffect(() => {
     window.muxjs = muxjs;
@@ -98,10 +98,11 @@ export const ShakaPlayer = forwardRef((props: IShakaPlayer, ref) => {
   useEffect(() => {
     if (shakaUi == null) return;
     shakaUi.configure(uiConfig);
-  }, []);
+  }, [uiConfig]);
 
   const handleTimeUpdate: React.ReactEventHandler<HTMLVideoElement> = (e) => {
-    setTime(e.currentTarget.currentTime);
+    const time = e.currentTarget.currentTime;
+    setState((prev) => ({ ...prev, time }));
   };
   const handlePlay: React.ReactEventHandler<HTMLVideoElement> = (e) =>
     setState((prev) => ({ ...prev, paused: false }));
@@ -111,14 +112,18 @@ export const ShakaPlayer = forwardRef((props: IShakaPlayer, ref) => {
     setState((prev) => ({ ...prev, playing: false }));
   const handlePause: React.ReactEventHandler<HTMLVideoElement> = (e) =>
     setState((prev) => ({ ...prev, paused: true, playing: false }));
-  const handleVolumeChange: React.ReactEventHandler<HTMLVideoElement> = (e) =>
-    setState((prev) => ({
-      ...prev,
-      muted: e.currentTarget.muted,
-      volume: e.currentTarget.volume,
-    }));
-  const handleDurationChange: React.ReactEventHandler<HTMLVideoElement> = (e) =>
-    setDuration(e.currentTarget.duration);
+  const handleVolumeChange: React.ReactEventHandler<HTMLVideoElement> = (e) => {
+    const muted = e.currentTarget.muted;
+    const volume = e.currentTarget.volume;
+    setState((prev) => ({ ...prev, muted, volume }));
+  };
+  const handleDurationChange: React.ReactEventHandler<HTMLVideoElement> = (
+    e
+  ) => {
+    const duration = e.currentTarget.duration;
+    setState((prev) => ({ ...prev, duration }));
+  };
+
   useImperativeHandle(
     ref,
     () => ({

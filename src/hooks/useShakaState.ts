@@ -1,11 +1,9 @@
 import { useShakaPlayerContext } from "./useShakaPlayerContext";
 
 export const useShakaState = () => {
-  const { state, time, duration } = useShakaPlayerContext();
+  const { state } = useShakaPlayerContext();
 
   return {
     ...state,
-    time,
-    duration,
   };
 };

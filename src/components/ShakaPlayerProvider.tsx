@@ -5,18 +5,16 @@ export const ShakaPlayerProvider = ({
   children,
 }: React.PropsWithChildren<{}>) => {
   const [state, setState] = useState<VideoState>({
+    time: 0,
+    duration: 0,
     paused: false,
     muted: false,
     volume: 1,
     playing: false,
   });
-  const [time, setTime] = useState(0);
-  const [duration, setDuration] = useState(0);
 
   return (
-    <ShakaPlayerContext.Provider
-      value={{ state, setState, time, setTime, duration, setDuration }}
-    >
+    <ShakaPlayerContext.Provider value={{ state, setState }}>
       {children}
     </ShakaPlayerContext.Provider>
   );
