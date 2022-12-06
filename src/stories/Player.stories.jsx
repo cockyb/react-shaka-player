@@ -1,14 +1,14 @@
 import React from "react";
 
-import { Player } from "./Player";
+import { App } from "./Player";
 
 export default {
-  title: "Example/Player",
-  component: Player,
+  title: "Example/App",
+  component: App,
   parameters: {},
 };
 
-const Template = (args) => <Player {...args} />;
+const Template = (args) => <App {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

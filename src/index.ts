@@ -1,1 +1,2 @@
-export { default as ShakaPlayer } from "./ShakaPlayer";
+export * from "./components";
+export * from "./hooks";
