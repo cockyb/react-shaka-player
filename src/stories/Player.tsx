@@ -36,8 +36,8 @@ const Player = () => {
       <button onClick={() => ref.current?.pause()}>Pause</button>
       <button onClick={() => ref.current?.play()}>Play</button>
       <br />
-      <button onClick={() => ref.current?.mute}>Mute</button>
-      <button onClick={() => ref.current?.unmute}>Un-mute</button>
+      <button onClick={() => ref.current?.mute()}>Mute</button>
+      <button onClick={() => ref.current?.unmute()}>Un-mute</button>
       <br />
       <button onClick={() => ref.current?.volume(0.1)}>Volume: 10%</button>
       <button onClick={() => ref.current?.volume(0.5)}>Volume: 50%</button>
