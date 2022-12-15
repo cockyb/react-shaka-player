@@ -1,6 +1,6 @@
 {
   "name": "react-shaka-plyr",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "shaka player wrapped react component",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
