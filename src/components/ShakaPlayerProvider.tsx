@@ -12,9 +12,20 @@ export const ShakaPlayerProvider = ({
     volume: 1,
     playing: false,
   });
+  const [shakaPlayer, setShakaPlayer] = useState<shaka.Player>();
+  const [shakaUi, setShakaUi] = useState<shaka.ui.Overlay>();
 
   return (
-    <ShakaPlayerContext.Provider value={{ state, setState }}>
+    <ShakaPlayerContext.Provider
+      value={{
+        state,
+        setState,
+        shakaPlayer,
+        setShakaPlayer,
+        shakaUi,
+        setShakaUi,
+      }}
+    >
       {children}
     </ShakaPlayerContext.Provider>
   );

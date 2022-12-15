@@ -12,6 +12,10 @@ export interface VideoState {
 interface ShakaPlayerContextProps {
   state: VideoState;
   setState: React.Dispatch<React.SetStateAction<VideoState>>;
+  shakaPlayer?: shaka.Player;
+  setShakaPlayer?: React.Dispatch<React.SetStateAction<shaka.Player>>;
+  shakaUi?: shaka.ui.Overlay;
+  setShakaUi?: React.Dispatch<React.SetStateAction<shaka.ui.Overlay>>;
 }
 
 export const ShakaPlayerContext =
